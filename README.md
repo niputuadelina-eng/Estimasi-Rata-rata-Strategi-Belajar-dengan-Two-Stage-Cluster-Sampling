@@ -1,6 +1,6 @@
 # Estimasi Rata-Rata Strategi Belajar Mahasiswa Program Studi Statistika Universitas Mataram Menggunakan Teknik Two-Stage Cluster Sampling
 
-# 📂 Struktur Repository
+### 📂 Struktur Repository
 
 ```text
 📦 Estimasi-RataRata-Strategi-Belajar
@@ -21,7 +21,7 @@
     └── Visualisasi rata-rata skor setiap indikator
 ```
 
-# 📑 Daftar Isi
+### 📑 Daftar Isi
 
 - [BAB I Pendahuluan](#bab-i-pendahuluan)
 - [BAB II Metodologi](#bab-ii-metodologi)
@@ -216,15 +216,25 @@ Visualisasi digunakan untuk menggambarkan rata-rata skor pada setiap indikator s
 # Menghitung rata-rata tiap indikator
 rata_indikator <- colMeans(kuesioner)
 # Diagram batang
-barplot(
+bp <- barplot(
   rata_indikator,
   main = "Rata-rata Skor Setiap Indikator Strategi Belajar",
   xlab = "Indikator",
   ylab = "Rata-rata Skor",
-  ylim = c(0,4),
-  names.arg = names(rata_indikator))
+  ylim = c(0, 4.2),
+  names.arg = names(rata_indikator),
+  col = "lightblue",
+  border = "black"
+)
+# Menambahkan nilai rata-rata di atas batang
+text(
+  x = bp,
+  y = rata_indikator + 0.08,
+  labels = round(rata_indikator, 2),
+  cex = 0.9
+)
 ```
-`colMenas` digunakan untuk menghitung rata-rata skor pada setiap item, `barplot` digunakan untuk menampilkan rata-rata dalam bentuk diagram batang.
+`colMenas` digunakan untuk menghitung rata-rata skor pada setiap item, `barplot` digunakan untuk menampilkan rata-rata dalam bentuk diagram batang,`text` digunakan untuk memberikan keterangan nilai rata-rata.
 ## Bab III Hasil dan Pembahasan
 ### 3.1 Gambaran Umum Data
 Data penelitian terdiri atas 30 responden yang berasal dari dua kelas terpilih, yaitu kelas 2024 A dan 2025 B. Dataset memuat variabel Angkatan, Kelas, sepuluh item kuesioner (P1–P10), serta skor total (Total) yang diperoleh dari penjumlahan seluruh item kuesioner. Berdasarkan enam baris pertama data (head data), setiap responden memiliki skor pada rentang 1–4 untuk setiap item sesuai dengan skala Likert yang digunakan.
@@ -252,6 +262,15 @@ Pengecekan missing value dilakukan untuk memastikan bahwa seluruh data yang digu
 Hasil pengecekan menunjukkan bahwa seluruh variabel memiliki nilai **0** pada jumlah *missing value*. Hal ini menunjukkan bahwa tidak terdapat data yang hilang pada dataset sehingga seluruh responden dapat digunakan dalam proses analisis. 
 #### 2. Outliers
 
+<p align="center">
+  <img src="Boxplot.png" width="600">
+</p>
+
+<p align="center">
+<b>Gambar 1.</b> Boxplot skor total strategi belajar mahasiswa.
+</p>
+
+Boxplot digunakan untuk mendeteksi keberadaan **outlier** pada skor total strategi belajar mahasiswa. Berdasarkan visualisasi, tidak terdapat titik yang berada di luar whisker sehingga **tidak ditemukan outlier** pada data. 
 ### 3.3 Hasil Uji Validitas
 Uji validitas dilakukan untuk mengetahui kemampuan setiap item kuesioner dalam mengukur variabel strategi belajar mahasiswa. 
 
@@ -390,6 +409,15 @@ Berdasarkan hasil analisis survei, diperoleh estimasi rata-rata strategi belajar
 Nilai **Design Effect (Deff)** yang diperoleh sebesar **0,002873**. Nilai ini lebih kecil dari **1**, yang menunjukkan bahwa berdasarkan hasil analisis, desain **Two-Stage Cluster Sampling** menghasilkan varians yang lebih kecil dibandingkan apabila menggunakan **Simple Random Sampling (SRS)** dengan ukuran sampel yang sama. Dengan demikian, desain sampling yang digunakan pada penelitian ini dapat dikatakan lebih efisien dalam menghasilkan estimasi rata-rata strategi belajar mahasiswa.
 ### 3.9 Visualisasi
 
+<p align="center">
+  <img src="Barplot.png" width="600">
+</p>
+
+<p align="center">
+<b>Gambar 2.</b> Barplot rata rata skor total strategi belajar mahasiswa.
+</p>
+
+Diagram batang menunjukkan rata-rata skor pada setiap indikator strategi belajar mahasiswa. Indikator **P5** memiliki rata-rata skor tertinggi, sedangkan **P2** memiliki rata-rata skor terendah. Secara keseluruhan, rata-rata setiap indikator relatif tidak jauh berbeda, sehingga strategi belajar mahasiswa dapat dikatakan cukup baik dan merata.
 ## Bab IV Penutup
 ### 4.1 Kesimpulan
 Berdasarkan hasil penelitian, dapat disimpulkan bahwa:
@@ -403,3 +431,4 @@ Berdasarkan hasil penelitian, beberapa rekomendasi yang dapat diberikan adalah:
 3. Penelitian selanjutnya juga dapat menambahkan variabel atau indikator lain yang berkaitan dengan strategi belajar sehingga informasi yang diperoleh menjadi lebih komprehensif.
 
 ## Link Kuisoner
+https://forms.gle/vQ2U9fjSRTy5ek756
