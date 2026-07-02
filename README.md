@@ -24,7 +24,7 @@
 ### 📑 Daftar Isi
 
 - [BAB I Pendahuluan](#bab-i-pendahuluan)
-- [BAB II Metodologi](#bab-ii-metodologi)
+- [BAB II Metodelogi](#bab-ii-metodelogi)
 - [BAB III Hasil dan Pembahasan](#bab-iii-hasil-dan-pembahasan)
 - [BAB IV Penutup](#bab-iv-penutup)
 
