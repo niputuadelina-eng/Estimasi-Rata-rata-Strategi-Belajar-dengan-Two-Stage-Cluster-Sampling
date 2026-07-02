@@ -11,7 +11,7 @@
 ├── 📊 Data.xlsx
 │   └── Data kuesioner strategi belajar mahasiswa
 │
-├── 💻 Analisis.R
+├── 💻 Sintaks Uas.R
 │   └── Script analisis Two-Stage Cluster Sampling menggunakan R
 │
 ├── 📈 Boxplot.png
@@ -127,7 +127,7 @@ Tahap ini digunakan untuk memilih variabel P1 sampai P10 yang merupakan indikato
 kuesioner <- data[, c("P1","P2","P3","P4","P5",
                       "P6","P7","P8","P9","P10")]
 ```
-#### 4.Menghitung Skor Total
+#### 4. Menghitung Skor Total
 Skor total digunakan untuk merepresentasikan tingkat strategi belajar setiap responden. Nilai ini diperoleh dengan menjumlahkan seluruh item kuesioner.
 ```r
 data$Total <- rowSums(kuesioner)
@@ -137,10 +137,9 @@ data$Total <- rowSums(kuesioner)
 Tahap ini dilakukan untuk memastikan kualitas data sebelum analisis. Pengecekan dilakukan terhadap data hilang, distribusi data, serta outlier.
 ```r
 colSums(is.na(data))
-summary(data)
 boxplot(data$Total)
 ```
-`is.na` digunakan untuk mengecek data hilang, `summary` memberikan ringkasan statistik data, `boxplot` digunakan untuk mendeteksi outlier pada skor total.
+`is.na` digunakan untuk mengecek data hilang, `boxplot` digunakan untuk mendeteksi outlier pada skor total.
 #### 6. Uji Validitas
 Uji validitas digunakan untuk melihat apakah setiap item kuesioner mampu mengukur variabel strategi belajar dengan baik.
 ```r
