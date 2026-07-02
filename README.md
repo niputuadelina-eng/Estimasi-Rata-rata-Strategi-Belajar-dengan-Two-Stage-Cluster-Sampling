@@ -7,6 +7,7 @@
 │
 ├── 📄 README.md
 │   └── Dokumentasi lengkap penelitian
+├── 📄 Executive Summary.pdf
 │
 ├── 📊 Data.xlsx
 │   └── Data kuesioner strategi belajar mahasiswa
