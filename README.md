@@ -296,7 +296,7 @@ Uji reliabilitas dilakukan untuk mengetahui tingkat konsistensi instrumen peneli
 
 Hasil uji reliabilitas menunjukkan bahwa nilai **Cronbach's Alpha** sebesar **0,811**. Nilai tersebut lebih besar dari **0,70**, sehingga instrumen penelitian dinyatakan **reliabel**. 
 ### 3.5 Hasil Pembobotan
-Pembobotan dilakukan untuk menyesuaikan peluang pemilihan setiap responden pada desain **Two-Stage Cluster Sampling**. 
+
 #### Perhitungan Bobot
 #### 1. Peluang Pemilihan Cluster (Tahap 1)
 Jumlah seluruh kelas = 6
